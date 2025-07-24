@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Navbar: React.FC = () => {
   return (
@@ -10,15 +11,15 @@ const Navbar: React.FC = () => {
         </div>
         {/* Nav Links */}
         <div className="hidden md:flex gap-8 text-lg font-medium font-helvetica">
+          <Link
+            to="/mantra"
+            className="transition-colors duration-200 text-black hover:text-orange-900 hover:underline underline-offset-4">
+            Our Mantra
+          </Link>
           <a
             href="#products"
             className="transition-colors duration-200 text-black hover:text-green-700 hover:underline underline-offset-4">
             Products
-          </a>
-          <a
-            href="#values"
-            className="transition-colors duration-200 text-black hover:text-orange-900 hover:underline underline-offset-4">
-            Values
           </a>
           <a
             href="#signup"
