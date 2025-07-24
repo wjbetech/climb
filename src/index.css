@@ -1,0 +1,44 @@
+@import "tailwindcss";
+
+:root {
+  font-family: Helvetica, Arial, system-ui, Avenir, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  font-size: 16px;
+
+  /* Remove color-scheme and color overrides */
+  background-color: #ffffff;
+  color: #213547;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Demo font classes for headings */
+.font-montserrat {
+  font-family: "Montserrat", Helvetica, Arial, system-ui, sans-serif;
+}
+
+.font-helvetica {
+  font-family: Helvetica, Arial, system-ui, Avenir, sans-serif;
+}
+
+body {
+  font-family: Helvetica, Arial, system-ui, Avenir, sans-serif;
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: #ffffff;
+  color: #213547;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+/* Remove prefers-color-scheme media query entirely */
