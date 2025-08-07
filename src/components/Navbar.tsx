@@ -71,12 +71,12 @@ const Navbar: React.FC = () => {
               >
                 Values
               </button>
-              <button
-                onClick={() => scrollToSection("products")}
+              <Link
+                to="/products"
                 className="cursor-pointer transition-colors duration-200 text-gray-700 hover:text-gray-900 hover:underline underline-offset-4"
               >
                 Products
-              </button>
+              </Link>
               <button
                 onClick={() => scrollToSection("connect")}
                 className="cursor-pointer transition-colors duration-200 text-gray-700 hover:text-gray-900 hover:underline underline-offset-4"
@@ -148,12 +148,13 @@ const Navbar: React.FC = () => {
                   >
                     Values
                   </button>
-                  <button
-                    onClick={() => scrollToSection("products")}
+                  <Link
+                    to="/products"
+                    onClick={() => setIsMobileMenuOpen(false)}
                     className="block w-full text-left text-gray-700 hover:text-black font-light tracking-wide py-2 transition-colors duration-200 cursor-pointer"
                   >
                     Products
-                  </button>
+                  </Link>
                   <button
                     onClick={() => scrollToSection("connect")}
                     className="block w-full text-left text-gray-700 hover:text-black font-light tracking-wide py-2 transition-colors duration-200 cursor-pointer"
