@@ -1,16 +1,35 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 const MissionStatement: React.FC = () => {
   return (
-    <section className="h-[600px] py-16 px-4 bg-white text-center place-content-center">
-      <div className="w-full max-w-5xl md:w-[70%] mx-auto px-2 sm:px-4 text-center">
-        <h2 className="text-2xl md:text-4xl font-montserrat font-bold mb-4 underline underline-offset-6">
+    <section className="py-20 px-4 bg-white min-h-screen flex items-center">
+      <div className="w-full max-w-4xl mx-auto px-4 text-center">
+        <motion.h2
+          className="text-3xl md:text-5xl font-montserrat font-bold mb-12 text-gray-900"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+        >
           Our Mission
-        </h2>
-        <p className="text-lg text-gray-700 max-w-2xl mx-auto">
-          We believe in growth, momentum, and the beauty of self-betterment. <br />
-          Climb. exists to inspire you to reach new heights—inside and out.
-        </p>
+        </motion.h2>
+
+        <motion.div
+          className="space-y-6"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.3 }}
+          viewport={{ once: true }}
+        >
+          <p className="text-xl md:text-2xl text-gray-700 leading-relaxed font-helvetica max-w-3xl mx-auto">
+            We believe in growth, momentum, and the beauty of self-betterment.
+          </p>
+          <p className="text-xl md:text-2xl text-gray-700 leading-relaxed font-helvetica max-w-3xl mx-auto">
+            <span className="font-bold text-gray-900">Climb.</span> exists to
+            inspire you to reach new heights—inside and out.
+          </p>
+        </motion.div>
       </div>
     </section>
   );

@@ -13,7 +13,10 @@ const products = [
 
 const ProductShowcase: React.FC = () => {
   return (
-    <section className="min-h-screen *:py-16 px-4 bg-gray-100 place-content-center">
+    <section
+      id="products"
+      className="min-h-screen py-16 px-4 bg-gray-100 flex items-center"
+    >
       <div className="w-full max-w-5xl md:w-[70%] mx-auto px-2 sm:px-4 text-center">
         <h2 className="text-2xl md:text-4xl font-montserrat font-bold text-center mb-8">
           Get Ready to Climb.
