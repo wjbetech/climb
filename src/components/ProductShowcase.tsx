@@ -69,6 +69,7 @@ const ProductShowcase: React.FC = () => {
                   src={product.image}
                   alt={product.name}
                   className="w-32 h-32 object-contain mx-auto"
+                  loading="lazy"
                 />
               </div>
               <h3 className="font-montserrat font-semibold text-lg mb-2 text-black">

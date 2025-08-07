@@ -11,13 +11,14 @@ const HeroSection: React.FC = () => {
   };
 
   return (
-    <section className="flex flex-col items-center justify-center h-screen bg-white text-center relative">
-      <motion.div
-        initial={{ opacity: 0, y: 30 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, ease: "easeOut" }}
-        className="flex flex-col items-center"
-      >
+    <section className="flex flex-col items-center h-screen bg-white text-center relative pt-20 md:pt-24">
+      <div className="flex-1 flex flex-col items-center justify-center max-w-full">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          className="flex flex-col items-center transform -translate-y-16 md:-translate-y-20"
+        >
         <motion.img
           src={climbLogo}
           alt="Climb."
@@ -34,12 +35,14 @@ const HeroSection: React.FC = () => {
         >
           Obsess · Pursue · Climb
         </motion.p>
-      </motion.div>
+        </motion.div>
+      </div>
 
       {/* Clickable Scroll indicator - moved higher up */}
       <motion.button
         onClick={scrollToMantra}
-        className="absolute bottom-16 md:bottom-20 left-1/2 transform -translate-x-1/2 cursor-pointer hover:scale-110 transition-transform duration-200"
+        className="absolute bottom-16 md:bottom-20 left-1/2 transform -translate-x-1/2 cursor-pointer hover:scale-110 transition-transform duration-200 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 rounded-full p-2"
+        aria-label="Scroll to next section - Our Story"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.2, duration: 0.6 }}
