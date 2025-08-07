@@ -19,22 +19,22 @@ const HeroSection: React.FC = () => {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="flex flex-col items-center transform -translate-y-16 md:-translate-y-20"
         >
-        <motion.img
-          src={climbLogo}
-          alt="Climb."
-          className="object-contain mb-8 max-h-64 md:max-h-80 lg:max-h-96 xl:max-h-[28rem] 2xl:max-h-[32rem] w-auto"
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-        />
-        <motion.p
-          className="text-xl md:text-2xl text-gray-700 tracking-wide font-light"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.5 }}
-        >
-          Obsess · Pursue · Climb
-        </motion.p>
+          <motion.img
+            src={climbLogo}
+            alt="Climb."
+            className="object-contain mb-8 max-h-64 md:max-h-80 lg:max-h-96 xl:max-h-[28rem] 2xl:max-h-[32rem] w-auto"
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+          />
+          <motion.p
+            className="text-xl md:text-2xl text-gray-700 tracking-wide font-light"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.5 }}
+          >
+            Obsess · Pursue · Climb
+          </motion.p>
         </motion.div>
       </div>
 
