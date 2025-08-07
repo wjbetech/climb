@@ -21,7 +21,7 @@ const HeroSection: React.FC = () => {
         <motion.img
           src={climbLogo}
           alt="Climb."
-          className="object-contain mb-8 max-h-32 md:max-h-40"
+          className="object-contain mb-8 max-h-64 md:max-h-80 lg:max-h-96 xl:max-h-[28rem] 2xl:max-h-[32rem] w-auto"
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}

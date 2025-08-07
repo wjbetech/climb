@@ -26,7 +26,7 @@ const Navbar: React.FC = () => {
         </Link>
 
         {/* Navigation Links */}
-        <div className="hidden md:flex gap-6 text-sm font-medium font-helvetica">
+        <div className="hidden md:flex gap-6 text-sm font-light tracking-wide">
           {isHomePage ? (
             // Smooth scroll navigation for home page
             <>

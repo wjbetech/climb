@@ -1,32 +1,50 @@
 import React, { useState } from "react";
+import { motion } from "framer-motion";
 
 const MailingListSignup: React.FC = () => {
   const [email, setEmail] = useState("");
 
   return (
-    <section id="connect" className="py-16 px-4 bg-gray-100 text-center">
-      <div className="w-full max-w-5xl md:w-[70%] mx-auto px-2 sm:px-4 text-center">
-        <h2 className="text-2xl md:text-4xl font-montserrat font-bold mb-4">
-          Join Our Mailing List
-        </h2>
-        <p className="text-gray-700 mb-6">
-          Get inspiration, updates, and exclusive offers.
-        </p>
-        <form className="flex flex-col md:flex-row items-center justify-center gap-4 max-w-xl mx-auto">
+    <section id="connect" className="py-20 px-4 bg-white text-center">
+      <div className="w-full max-w-4xl mx-auto px-4 text-center">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+        >
+          <h2 className="text-3xl md:text-5xl font-montserrat font-bold mb-6 text-black">
+            <span className="paint-stroke">Climb. with us</span>
+          </h2>
+          <p className="text-lg md:text-xl text-gray-700 mb-8 max-w-2xl mx-auto font-light tracking-wide leading-relaxed">
+            Be part of the journey. Get inspiration, updates, and early access
+            to our community.
+          </p>
+        </motion.div>
+
+        <motion.form
+          className="flex flex-col md:flex-row items-center justify-center gap-4 max-w-md mx-auto"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.3 }}
+          viewport={{ once: true }}
+        >
           <input
             type="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             placeholder="Your email address"
-            className="px-4 py-2 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary w-full md:w-auto"
+            className="px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-400 focus:border-transparent w-full md:flex-1 font-light"
           />
-          <button
+          <motion.button
             type="button"
-            className="px-6 py-2 rounded font-semibold bg-green-500 text-white cursor-pointer hover:bg-green-600/80 transition"
+            className="px-8 py-3 rounded-lg font-semibold bg-black text-white hover:bg-gray-800 transition-colors duration-200 font-montserrat"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
           >
-            Sign Up
-          </button>
-        </form>
+            Join Us
+          </motion.button>
+        </motion.form>
       </div>
     </section>
   );

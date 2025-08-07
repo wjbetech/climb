@@ -1,44 +1,131 @@
 @import "tailwindcss";
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700;800&display=swap");
 
 :root {
-  font-family: Helvetica, Arial, system-ui, Avenir, sans-serif;
-  line-height: 1.5;
+  /* Minimalist White Color System with Artistic Accents */
+  --color-primary: #1a1a1a; /* Deep black for text */
+  --color-secondary: #2d2d2d; /* Charcoal for emphasis */
+  --color-gray-light: #f8f9fa; /* Very light gray */
+  --color-gray-medium: #e9ecef; /* Light gray for subtle elements */
+  --color-gray-border: #dee2e6; /* Border gray */
+  --color-white: #ffffff; /* Pure white */
+
+  /* Artistic Accent Colors for Streaks */
+  --color-accent-black: #000000; /* Pure black for artistic streaks */
+  --color-accent-charcoal: #333333; /* Charcoal for secondary streaks */
+
+  /* Typography */
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  line-height: 1.6;
   font-weight: 400;
   font-size: 16px;
 
-  /* Remove color-scheme and color overrides */
-  background-color: #ffffff;
-  color: #213547;
+  /* Base colors */
+  background-color: var(--color-white);
+  color: var(--color-primary);
 
+  /* Rendering optimizations */
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Demo font classes for headings */
+/* Font class system */
 .font-montserrat {
-  font-family: "Montserrat", Helvetica, Arial, system-ui, sans-serif;
+  font-family: "Montserrat", system-ui, -apple-system, sans-serif;
+}
+
+.font-inter {
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
 }
 
 .font-helvetica {
-  font-family: Helvetica, Arial, system-ui, Avenir, sans-serif;
+  font-family: Helvetica, Arial, system-ui, sans-serif;
 }
 
 body {
-  font-family: Helvetica, Arial, system-ui, Avenir, sans-serif;
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
   margin: 0;
-  display: flex;
-  place-items: center;
   min-width: 320px;
   min-height: 100vh;
   background-color: #ffffff;
-  color: #213547;
+  color: var(--color-primary);
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Montserrat", system-ui, -apple-system, sans-serif;
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--color-primary);
 }
 
-/* Remove prefers-color-scheme media query entirely */
+/* Artistic Streak Elements */
+.artistic-streak {
+  position: relative;
+  display: inline-block;
+}
+
+.artistic-streak::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -10%;
+  right: -10%;
+  height: 40%;
+  background: var(--color-accent-black);
+  transform: translateY(-50%) rotate(-1deg) skewX(-5deg);
+  z-index: -1;
+  opacity: 0.1;
+}
+
+.artistic-streak-angled {
+  position: relative;
+  display: inline-block;
+}
+
+.artistic-streak-angled::before {
+  content: "";
+  position: absolute;
+  top: 60%;
+  left: -8%;
+  right: -8%;
+  height: 35%;
+  background: linear-gradient(
+    45deg,
+    transparent 20%,
+    var(--color-accent-black) 20%,
+    var(--color-accent-black) 80%,
+    transparent 80%
+  );
+  transform: translateY(-50%) rotate(2deg);
+  z-index: -1;
+  opacity: 0.08;
+}
+
+.paint-stroke {
+  position: relative;
+  display: inline-block;
+}
+
+.paint-stroke::after {
+  content: "";
+  position: absolute;
+  top: 45%;
+  left: -15%;
+  right: -15%;
+  height: 50%;
+  background: radial-gradient(
+    ellipse at center,
+    var(--color-accent-charcoal) 30%,
+    transparent 70%
+  );
+  transform: translateY(-50%) rotate(-2deg) scaleY(0.3);
+  z-index: -1;
+  opacity: 0.06;
+}

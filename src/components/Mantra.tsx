@@ -9,29 +9,29 @@ const Mantra: React.FC = () => {
     >
       <div className="w-full max-w-4xl mx-auto px-4 text-center">
         <motion.h2
-          className="text-3xl md:text-5xl font-montserrat font-bold mb-16 text-gray-900"
+          className="text-3xl md:text-5xl font-montserrat font-bold mb-16 text-black"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          Our Mantra
+          <span className="paint-stroke">Our Mantra</span>
         </motion.h2>
 
         <div className="space-y-8 max-w-3xl mx-auto">
           <motion.p
-            className="text-lg md:text-xl text-gray-700 leading-relaxed font-helvetica"
+            className="text-lg md:text-xl text-gray-700 leading-relaxed font-light tracking-wide"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
             viewport={{ once: true }}
           >
             We believe in the obsessed. The ones who pursue. The ones who{" "}
-            <span className="font-bold text-gray-900">climb.</span>
+            <span className="font-bold text-black">climb.</span>
           </motion.p>
 
           <motion.p
-            className="text-lg md:text-xl text-gray-700 leading-relaxed font-helvetica"
+            className="text-lg md:text-xl text-gray-700 leading-relaxed font-light tracking-wide"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
@@ -43,7 +43,7 @@ const Mantra: React.FC = () => {
           </motion.p>
 
           <motion.p
-            className="text-lg md:text-xl text-gray-700 leading-relaxed font-helvetica"
+            className="text-lg md:text-xl text-gray-700 leading-relaxed font-light tracking-wide"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.6 }}
@@ -51,7 +51,7 @@ const Mantra: React.FC = () => {
           >
             It's about becoming who you were meant to be. Falling in love with
             your ugly side.{" "}
-            <span className="font-bold text-gray-900">
+            <span className="font-bold text-black">
               It's about the commitment you make to yourself to be the best that
               you can.
             </span>
