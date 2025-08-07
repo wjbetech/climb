@@ -99,7 +99,7 @@ const Navbar: React.FC = () => {
         <div className="md:hidden">
           <button
             onClick={toggleMobileMenu}
-            className="p-2 text-gray-700 hover:text-black focus:outline-none"
+            className="p-2 text-gray-700 hover:text-black focus:outline-none cursor-pointer"
             aria-label="Toggle mobile menu"
           >
             <div className="w-6 h-5 relative flex flex-col justify-between">
@@ -138,25 +138,25 @@ const Navbar: React.FC = () => {
                 <>
                   <button
                     onClick={() => scrollToSection("mantra")}
-                    className="block w-full text-left text-gray-700 hover:text-black font-light tracking-wide py-2 transition-colors duration-200"
+                    className="block w-full text-left text-gray-700 hover:text-black font-light tracking-wide py-2 transition-colors duration-200 cursor-pointer"
                   >
                     Our Story
                   </button>
                   <button
                     onClick={() => scrollToSection("values")}
-                    className="block w-full text-left text-gray-700 hover:text-black font-light tracking-wide py-2 transition-colors duration-200"
+                    className="block w-full text-left text-gray-700 hover:text-black font-light tracking-wide py-2 transition-colors duration-200 cursor-pointer"
                   >
                     Values
                   </button>
                   <button
                     onClick={() => scrollToSection("products")}
-                    className="block w-full text-left text-gray-700 hover:text-black font-light tracking-wide py-2 transition-colors duration-200"
+                    className="block w-full text-left text-gray-700 hover:text-black font-light tracking-wide py-2 transition-colors duration-200 cursor-pointer"
                   >
                     Products
                   </button>
                   <button
                     onClick={() => scrollToSection("connect")}
-                    className="block w-full text-left text-gray-700 hover:text-black font-light tracking-wide py-2 transition-colors duration-200"
+                    className="block w-full text-left text-gray-700 hover:text-black font-light tracking-wide py-2 transition-colors duration-200 cursor-pointer"
                   >
                     Connect
                   </button>
@@ -165,7 +165,7 @@ const Navbar: React.FC = () => {
                 <Link
                   to="/"
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className="block text-gray-700 hover:text-black font-light tracking-wide py-2 transition-colors duration-200"
+                  className="block text-gray-700 hover:text-black font-light tracking-wide py-2 transition-colors duration-200 cursor-pointer"
                 >
                   Home
                 </Link>

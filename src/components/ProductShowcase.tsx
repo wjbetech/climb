@@ -57,7 +57,7 @@ const ProductShowcase: React.FC = () => {
           {products.map((product, index) => (
             <motion.div
               key={product.name}
-              className="bg-white rounded-lg border border-gray-100 shadow-sm p-6 hover:shadow-md transition-shadow duration-300"
+              className="bg-white rounded-lg border border-gray-100 shadow-sm px-6 py-10 hover:shadow-md transition-shadow duration-300"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
